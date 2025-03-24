@@ -6,6 +6,7 @@ const ProductContainer = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const getProducts = async () => {
     const result = await axios.get("https://fakestoreapi.com/products");
+    console.log(result.data)
     setProducts(
       result.data.filter(
         (t: Product) =>
@@ -26,6 +27,7 @@ const ProductContainer = () => {
             image={p.image}
             price={p.price}
             key={p.id}
+            rating={p.rating}
           />
         ))}
       </div>

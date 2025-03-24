@@ -1,11 +1,20 @@
 import { Card } from "@/components/ui/card";
 import React from "react";
+import Rating from "./rating";
 
-type ProductCardProps = Pick<Product, "image" | "title" | "price"> & {};
+type ProductCardProps = Pick<
+  Product,
+  "image" | "title" | "price" | "rating"
+> & {};
 
-const ProductCard: React.FC<ProductCardProps> = ({ image, title, price }) => {
+const ProductCard: React.FC<ProductCardProps> = ({
+  image,
+  title,
+  price,
+  rating,
+}) => {
   return (
-    <Card className="flex flex-col py-0 w-[150px] h-[220px] sm:w-[230px] sm:h-[300px] rounded-xs justify-items-start">
+    <Card className="flex flex-col py-0 w-[160px] h-[260px] sm:w-[230px] sm:h-[300px] rounded-xs">
       <div className="h-3/5 w-full bg-neutral-100">
         <img src={image} className="w-auto h-full mx-auto" alt="" />
       </div>
@@ -15,6 +24,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ image, title, price }) => {
           {" "}
           ₹ {(price * 75).toFixed()}
         </p>
+        <Rating rating={rating.rate} ratingCount={rating.count} />
       </div>
     </Card>
   );
