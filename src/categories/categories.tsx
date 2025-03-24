@@ -1,3 +1,5 @@
+import { BASE_URL } from "@/constants";
+
 const Categories = () => {
   const categories: Categorie[] = [
     {
@@ -17,7 +19,7 @@ const Categories = () => {
         {categories.map((c, index) => (
           <div className="flex flex-col gap-y-2  " key={index}>
             <img
-              src={c.image}
+              src={` ${BASE_URL}${c.image}`}
               alt="mens"
               className="max-h-[350px] w-auto rounded-2xl shadow "
             />
