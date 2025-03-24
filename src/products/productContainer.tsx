@@ -17,7 +17,7 @@ const ProductContainer = () => {
     getProducts();
   }, []);
   return (
-    <div className="w-full h-auto flex flex-col gap-y-5 px-2 justify-center ">
+    <div className="w-full h-auto flex flex-col gap-y-5 sm:px-2 justify-center ">
       <div className="font-bold text-2xl">Products</div>
       <div className="flex flex-row flex-wrap  gap-x-2 gap-y-2 sm:gap-x-5 sm:gap-y-5 justify-center">
         {products.map((p) => (
