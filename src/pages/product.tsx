@@ -1,4 +1,4 @@
-import ProductInfo from "@/products/productInfo";
+import ProductInfo, { ProductInfoSkeleton } from "@/products/productInfo";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -24,7 +24,7 @@ const Product = () => {
   }, [id]);
   return (
     <div className="w-full sm:max-w-[1200px] h-auto mx-auto">
-      {product && <ProductInfo product={product} />}
+      {product ? <ProductInfo product={product} /> : <ProductInfoSkeleton />}
     </div>
   );
 };
