@@ -18,7 +18,7 @@ declare global {
   };
 
   type CartItem = {
-    id:number,
+    id: number;
     product: Product;
     size: string | null;
     quantity: number;

@@ -15,7 +15,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   rating,
 }) => {
   return (
-    <Card className="flex flex-col py-0 w-[185px] min-w-[170px] h-[260px] sm:w-[230px] sm:h-[300px] rounded-xs">
+    <Card className="flex flex-col py-0 w-[160px]  h-[260px] sm:w-[230px] sm:h-[300px] rounded-xs">
       <div className="h-3/5 w-full bg-neutral-100">
         <img src={image} className="w-auto h-full mx-auto" alt="" />
       </div>
@@ -34,6 +34,6 @@ export default ProductCard;
 
 export const ProductCardSkeleton = () => {
   return (
-    <Skeleton className="w-[185px] h-[260px] sm:w-[230px] sm:h-[300px] rounded-xs bg-gray-200 animate-pulse" />
+    <Skeleton className="w-[160px] h-[260px] sm:w-[230px] sm:h-[300px] rounded-xs bg-gray-200 animate-pulse" />
   );
 };

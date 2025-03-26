@@ -4,8 +4,13 @@ import Nav from "./nav/nav";
 import Home from "./pages/home";
 import Product from "./pages/product";
 import CartPage from "./pages/cartpage";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(()=>{
+
+    console.log(JSON.parse(localStorage.getItem("cart") || "[]"))
+  },[])
   return (
     <div className="w-full min-h-screen h-auto flex flex-col gap-y-10 px-2 bg-gray-50 ">
       <Nav />
